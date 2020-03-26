@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+}
+body, html {
+  padding: 0px;
+  margin: 0px;
+  font-family: arial;
+  font-weight: bolder;
+  font-size: 6vmax;
+
+}
+.letsgroove :hover{
+  color: white;
+}
+.gridcontainer{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: .5fr .4fr .4fr .4fr .5fr;
+  animation: flash .5s infinite;
+}
+.letsgroove{
+  grid-column-start: 2;
+  grid-column-end: span 5;
+  grid-row-start: 2;
+    color: orange;
+  background-color: blue;
+padding: 2.3vmax;
+  text-decoration: none;
+        animation: scale-one .5s infinite;
+    justify-self: center;
+}
+.letsgroove :hover{
+  grid-column-start: 2;
+  grid-column-end: span 5;
+  grid-row-start: 2;
+    color: orange;
+  background-color: red;
+padding: 2.3vmax;
+  text-decoration: none;
+        animation: scale-one .5s infinite;
+    justify-self: center;
+}
+.eyeknow{
+  grid-column-start: 7;
+    grid-column-end: span 5;
+      grid-row-start: 2;
+        color: orange;
+      justify-self: center;
+      padding: 2.3vmax;
+      background-color: blue;
+  text-decoration: none;
+        animation: scale-one .5s infinite;
+}
+
+.getdown{
+  font-size: 1.6em;
+  color: orange;
+  grid-column-end: span 10;
+  grid-column-start: 2;
+        grid-row-start: 4;
+  background-color: blue;
+  padding: 3vmax;
+  justify-self: center;
+    text-decoration: none;
+      animation: scale-too .5s infinite;
+}
+
+@keyframes  flash{
+  0%{ background-color: white}
+    20%{ background-color: black}
+  40%{ background-color: cyan}
+  60%{ background-color: purple}
+  80%{ background-color: white}
+  100%{ background-color: red}
+}
+@keyframes scale-one {
+	0% { transform: scale(1); }
+	50% { transform: scale(.5); }
+	}
+  @keyframes scale-too {
+  	0% { transform: scale(1); }
+  	50% { transform: scale(.3); }
+  	}
